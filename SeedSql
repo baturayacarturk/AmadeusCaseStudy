@@ -1,0 +1,38 @@
+INSERT INTO airports (name, city)
+VALUES
+    ('Istanbul Atatürk Airport', 'Istanbul'),
+    ('Ankara Esenboğa Airport', 'Ankara'),
+    ('Izmir Adnan Menderes Airport', 'Izmir'),
+    ('Antalya Airport', 'Antalya'),
+    ('Bodrum Milas Airport', 'Bodrum'),
+    ('Adana Şakirpaşa Airport', 'Adana'),
+    ('Trabzon Airport', 'Trabzon'),
+    ('Dalaman Airport', 'Dalaman'),
+    ('Gaziantep Oğuzeli Airport', 'Gaziantep'),
+    ('Eskişehir Anadolu Airport', 'Eskişehir'),
+    ('Diyarbakır Airport', 'Diyarbakır'),
+    ('Kayseri Erkilet Airport', 'Kayseri'),
+    ('Konya Airport', 'Konya'),
+    ('Van Ferit Melen Airport', 'Van'),
+    ('Malatya Erhaç Airport', 'Malatya');
+
+
+
+   INSERT INTO flights (departure_airport_id, arrival_airport_id, departure_date_time, return_date_time, price)
+VALUES
+    (1, 2, '2023-08-18 08:00:00', '2023-08-18 10:00:00', 250.0),
+    (3, 1, '2023-08-18 09:30:00', '2023-08-18 11:30:00', 180.0),
+    (2, 4, '2023-08-18 11:00:00', '2023-08-18 13:00:00', 300.0),
+    (4, 3, '2023-08-18 12:30:00', '2023-08-18 14:30:00', 220.0),
+    (5, 6, '2023-08-18 14:00:00', '2023-08-18 16:00:00', 150.0),
+    (6, 5, '2023-08-18 15:30:00', '2023-08-18 17:30:00', 170.0),
+    (7, 8, '2023-08-18 17:00:00', '2023-08-18 19:00:00', 280.0),
+    (8, 7, '2023-08-18 18:30:00', '2023-08-18 20:30:00', 210.0),
+    (9, 10, '2023-08-18 20:00:00', '2023-08-18 22:00:00', 190.0),
+    (10, 9, '2023-08-18 21:30:00', '2023-08-18 23:30:00', 230.0),
+    (11, 12, '2023-08-18 08:00:00', '2023-08-18 10:00:00', 260.0),
+    (12, 11, '2023-08-18 09:30:00', '2023-08-18 11:30:00', 210.0),
+    (13, 14, '2023-08-18 11:00:00', '2023-08-18 13:00:00', 180.0),
+    (14, 13, '2023-08-18 12:30:00', '2023-08-18 14:30:00', 220.0),
+    (15, 1, '2023-08-18 14:00:00', '2023-08-18 16:00:00', 250.0);
+
