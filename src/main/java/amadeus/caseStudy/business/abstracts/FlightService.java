@@ -13,4 +13,5 @@ public interface FlightService {
 	void Delete(int id);
 	void Update(int id,Flight flight);
 	List<Flight> searchFlights(String departure, String arrival, LocalDateTime departureDateTime, LocalDateTime returnDateTime);
+	List<Flight>sendApiRequest(String url);
 }

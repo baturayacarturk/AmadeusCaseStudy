@@ -33,6 +33,7 @@ public class SecurityConfig {
 		.requestMatchers(GET,"api/flights/**").permitAll()
 		.requestMatchers(GET,"api/airports/**").permitAll()
 		.requestMatchers(POST,"api/flights/**").hasAnyAuthority("ADMIN")
+		.requestMatchers("/api/mock/**").permitAll()
 		.requestMatchers(GET,"/v3/api-docs/**","/swagger-ui/**","/swagger-ui.html").permitAll()
 		.anyRequest()
 		.authenticated()
