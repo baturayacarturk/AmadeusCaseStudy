@@ -1,9 +1,12 @@
 package amadeus.caseStudy.api.controllers;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -70,6 +73,14 @@ public class FlightsController {
 	@GetMapping("/airport/{airportId}/departingFlights")
 	public ResponseEntity<List<Flight>>getDepartingFlights(@PathVariable int airportId){
 		return ResponseEntity.ok().body(this.airportService.GetDepartingFlights(airportId));
+	}
+	@GetMapping("/search")
+	public ResponseEntity<List<Flight>> searchFlights(@RequestParam String departure,
+            @RequestParam String arrival,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime  departureDateTime,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime returnDateTime){
+		List<Flight> flights = flightService.searchFlights(departure, arrival, departureDateTime, returnDateTime);
+        return ResponseEntity.ok(flights);
 	}
 	
 	

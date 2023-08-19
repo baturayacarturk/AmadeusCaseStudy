@@ -31,6 +31,7 @@ public class SecurityConfig {
 		.permitAll()
 		
 		.requestMatchers(GET,"api/flights/**").permitAll()
+		.requestMatchers(GET,"api/airports/**").permitAll()
 		.requestMatchers(POST,"api/flights/**").hasAnyAuthority("ADMIN")
 		.requestMatchers(GET,"/v3/api-docs/**","/swagger-ui/**","/swagger-ui.html").permitAll()
 		.anyRequest()

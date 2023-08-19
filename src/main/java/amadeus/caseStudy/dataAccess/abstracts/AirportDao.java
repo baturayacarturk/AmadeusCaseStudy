@@ -6,5 +6,6 @@ import org.springframework.stereotype.Repository;
 import amadeus.caseStudy.entities.concretes.Airport;
 @Repository
 public interface AirportDao extends JpaRepository<Airport,Integer>{
+	
 
 }

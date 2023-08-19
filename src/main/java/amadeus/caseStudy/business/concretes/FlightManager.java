@@ -1,5 +1,6 @@
 package amadeus.caseStudy.business.concretes;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -51,5 +52,12 @@ public class FlightManager implements FlightService{
 	public Optional<Flight>GetById(int id) {
 		return this.flightDao.findById(id);
 	}
+	@Override
+	public List<Flight> searchFlights(String departure, String arrival, LocalDateTime departureDateTime,
+			LocalDateTime returnDateTime) {
+		// TODO Auto-generated method stub
+		return this.flightDao.findFlightsByCriteria(departure, arrival, departureDateTime, returnDateTime);
+	}
+	
 
 }
